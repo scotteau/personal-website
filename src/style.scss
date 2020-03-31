@@ -1,0 +1,52 @@
+@import "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+  font-family: $heading;
+}
+
+h1 {
+  font-weight: $h1-weight;
+}
+
+h2 {
+  font-weight: $h2-weight;
+}
+
+h3 {
+  font-weight: $h3-weight;
+}
+
+body, a {
+  font-family: $bodyText;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: $bg-dark;
+  color: white;
+}
+
+main {
+  margin: 0 20px;
+}
+
+
+
+
+
+
+@import "small";
+
+
+
+
+
+
+
+
