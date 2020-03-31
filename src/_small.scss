@@ -1,18 +1,17 @@
 @media screen and (max-width: 48em) {
-
   // region Navigation bar
-  header{
+  header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 25px;
     background-color: $bg-dark;
-    z-index: 140;
     position: sticky;
     top: 0;
+    z-index: 20;
 
     .logo {
-      width:44px;
+      width: 44px;
       position: relative;
       top: 2px;
     }
@@ -21,7 +20,6 @@
       display: flex;
       list-style: none;
       align-items: center;
-      z-index: 120;
 
       li {
         margin-left: 2.5rem;
@@ -35,33 +33,35 @@
           &:hover {
             cursor: pointer;
             text-decoration: underline;
-
           }
+
+
         }
 
-        button {
-          font-size: $p-size*0.9;
+        .cta {
+          font-size: $p-size * 0.9;
           font-weight: 400;
           padding: 6px 1.5em;
           border: 1px solid white;
           border-radius: 20px;
           background-color: transparent;
-          color:white;
+          color: white;
           display: flex;
           align-items: center;
           opacity: 0.9;
           transition: all 0.3s linear;
           font-family: $bodyText;
 
-          span {
+          [class="material-icons"] {
             margin-left: 4px;
           }
 
           &:hover {
-            background: white;
-            color: $blue;
+            background-color: white;
+            cursor: pointer;
+            color: $bg-dark;
+            text-decoration: none;
           }
-
         }
       }
     }
@@ -83,24 +83,21 @@
     display: flex;
     justify-content: center;
 
-
     .message {
       position: absolute;
       top: 33%;
-      border: 1px solid $green;
       margin: 0 auto;
-      z-index: 130;
       min-width: 375px;
 
       h1 {
         opacity: 0.9;
-        font-size: $h1-size*0.5;
+        font-size: $h1-size * 0.5;
         text-align: center;
       }
 
       h3 {
         opacity: 0.5;
-        font-size: $h3-size*0.5;
+        font-size: $h3-size * 0.5;
         text-align: center;
       }
     }
@@ -108,9 +105,7 @@
     .blob {
       display: none;
     }
-
   }
-
 
   //endregion
 
@@ -126,25 +121,38 @@
     align-items: center;
     overflow: hidden;
 
-
     .circle {
       position: absolute;
       transform-origin: top;
       top: 0;
-      width:100px;
+      width: 100px;
       transition: 0.2s ease-out all;
     }
 
-
-
-
     h2 {
       text-align: center;
-      z-index: 110;
+      z-index: 10;
     }
   }
 
-//  endregion
+  //  endregion
+
+  .title {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .highlighter {
+      position: relative;
+      top: -14px;
+      height: 8px;
+      opacity: 0.8;
+      background-color: $blue;
+      transition: all 0.3s ease-in-out;
+    }
+
+  }
 
   //  region About Page Layout
   .about {
@@ -153,41 +161,56 @@
     min-height: 100vh;
     border: 1px solid red;
 
+    .title {
 
-    h2 {
-      text-align: center;
-      padding: 1.2em;
-      z-index: 150;
+      h2 {
+        text-align: center;
+        z-index: 10;
+      }
+
+      .highlighter {
+        width: 34%;
+      }
     }
+
 
     .interactive {
       p {
         margin-top: 0.8em;
         line-height: 1.5;
       }
+
+      padding-bottom: 80px;
     }
   }
 
+  //  endregion
 
-
-//  endregion
-
-//  region Work Page Layout
+  //  region Work Page Layout
   .work {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    border: 1px solid red;
 
-    h2 {
-      text-align: center;
-      padding: 1.6em;
+    .title {
+      h2 {
+        text-align: center;
+        z-index: 10;
+      }
+
+      .highlighter {
+        width: 18%;
+      }
+
     }
+
+
   }
 
-//  endregion
+  //  endregion
 
-
-//  region Contact Page Layout
+  //  region Contact Page Layout
 
   .contact {
     height: 66vh;
@@ -206,9 +229,11 @@
 
       li {
         margin-top: 16%;
+        transition: all 0.3s ease-in-out;
 
         &:hover {
           cursor: pointer;
+          text-decoration: underline;
         }
 
         a {
@@ -220,23 +245,21 @@
     }
   }
 
-//  region
+  //  region
 
-//  region Footer Layout
-    footer {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin: 1.5em auto;
+  //  region Footer Layout
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5em auto;
 
-      p {
-        text-align: center;
-        opacity: 0.5;
-        font-size: $p-size*0.8;
-      }
+    p {
+      text-align: center;
+      opacity: 0.5;
+      font-size: $p-size * 0.8;
     }
-//  region
-
-
+  }
+  //  region
 }
