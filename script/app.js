@@ -1,7 +1,7 @@
 // Circle animation
 const tween = gsap.to(".circle", 2, {
     ease: "none",
-    scaleX: 30, scaleY:8});
+    scale:40});
 
 const trigger = document.querySelector("h1");
 
@@ -12,6 +12,6 @@ const scene = new ScrollMagic.Scene({
     duration: 500,
     triggerHook: 0.35
 })
-    // .addIndicators()
+    .addIndicators()
     .setTween(tween)
     .addTo(controller);
