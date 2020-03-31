@@ -193,7 +193,10 @@
     height: 100vh;
     border: 1px solid red;
 
+
+
     .title {
+      padding: 1.5em;
       h2 {
         text-align: center;
         z-index: 10;
@@ -202,7 +205,21 @@
       .highlighter {
         width: 18%;
       }
+    }
 
+    .portfolios {
+      width: 100%;
+
+      ul {
+        list-style: none;
+
+        li {
+          a img {
+            width: 100%;
+          }
+
+        }
+      }
     }
 
 
