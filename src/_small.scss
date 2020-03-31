@@ -1,0 +1,235 @@
+@media screen and (max-width: 48em) {
+
+  // region Navigation bar
+  header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    background-color: $bg-dark;
+    z-index: 140;
+    position: sticky;
+    top: 0;
+
+    .logo {
+      width:44px;
+      position: relative;
+      top: 2px;
+    }
+
+    ul {
+      display: flex;
+      list-style: none;
+      align-items: center;
+      z-index: 120;
+
+      li {
+        margin-left: 2.5rem;
+
+        a {
+          color: white;
+          text-decoration: none;
+          text-transform: capitalize;
+          display: none;
+
+          &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+
+          }
+        }
+
+        button {
+          font-size: $p-size*0.9;
+          font-weight: 400;
+          padding: 6px 1.5em;
+          border: 1px solid white;
+          border-radius: 20px;
+          background-color: transparent;
+          color:white;
+          display: flex;
+          align-items: center;
+          opacity: 0.9;
+          transition: all 0.3s linear;
+          font-family: $bodyText;
+
+          span {
+            margin-left: 4px;
+          }
+
+          &:hover {
+            background: white;
+            color: $blue;
+          }
+
+        }
+      }
+    }
+  }
+
+  //endregion
+
+  //region Hero page layout
+
+  body {
+    min-width: 375px;
+  }
+
+  .hero {
+    width: 66.6%;
+    margin: 0 auto;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    .message {
+      position: absolute;
+      top: 27%;
+      border: 1px solid $green;
+      margin: 0 auto;
+      z-index: 130;
+      min-width: 375px;
+
+      h1 {
+        opacity: 0.9;
+        font-size: $h1-size*0.5;
+        text-align: center;
+      }
+
+      h3 {
+        opacity: 0.5;
+        font-size: $h3-size*0.5;
+        text-align: center;
+      }
+    }
+
+    .blob {
+      display: none;
+    }
+
+  }
+
+  //endregion
+
+  //region Intro Page Layout
+  .intro {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    left: -20px;
+    bottom: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $purple;
+
+
+      .circle {
+        position: absolute;
+        top: -100px;
+        transform-origin: top;
+        width:100px;
+        z-index: 100;
+        transition: 0.25s ease-out all;
+      }
+
+
+
+    h2 {
+      text-align: center;
+      z-index: 110;
+    }
+  }
+
+//  endregion
+
+  //  region About Page Layout
+  .about {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    z-index: 200;
+    border: 1px solid red;
+
+
+    h2 {
+      text-align: center;
+      padding: 1.6em;
+      z-index: 150;
+    }
+
+    .interactive {
+      p {
+        margin-top: 0.8em;
+        line-height: 1.5;
+      }
+    }
+  }
+
+
+
+//  endregion
+
+//  region Work Page Layout
+  .work {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    h2 {
+      text-align: center;
+      padding: 1.6em;
+    }
+  }
+
+//  endregion
+
+
+//  region Contact Page Layout
+
+  .contact {
+    height: 66vh;
+
+    h2 {
+      text-align: center;
+      margin-top: 50%;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10%;
+      li{
+        margin-top: 16%;
+        a{
+          color: white;
+          text-transform: capitalize;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+//  region
+
+//  region Footer Layout
+    footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 1.5em auto;
+
+      p {
+        text-align: center;
+        opacity: 0.5;
+        font-size: $p-size*0.8;
+      }
+    }
+//  region
+
+
+}
