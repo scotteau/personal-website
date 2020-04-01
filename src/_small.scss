@@ -34,8 +34,6 @@
             cursor: pointer;
             text-decoration: underline;
           }
-
-
         }
 
         .cta {
@@ -142,16 +140,17 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    padding: 2em;
 
     .highlighter {
+      transform-origin: left;
       position: relative;
       top: -14px;
       height: 8px;
       opacity: 0.8;
       background-color: $blue;
-      transition: all 0.3s ease-in-out;
+      transform: scaleX(0);
     }
-
   }
 
   //  region About Page Layout
@@ -159,10 +158,8 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    border: 1px solid red;
 
     .title {
-
       h2 {
         text-align: center;
         z-index: 10;
@@ -173,8 +170,9 @@
       }
     }
 
-
     .interactive {
+      width: 90%;
+      margin: 0 auto;
       p {
         margin-top: 0.8em;
         line-height: 1.5;
@@ -188,15 +186,16 @@
 
   //  region Work Page Layout
   .work {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    border: 1px solid red;
-
-
+    width: 100vw;
+    position: relative;
+    left: -20px;
 
     .title {
-      padding: 1.5em;
+      position: sticky;
+      top: 8vh;
+
+      padding-bottom: 20vh;
+
       h2 {
         text-align: center;
         z-index: 10;
@@ -210,19 +209,20 @@
     .portfolios {
       width: 100%;
 
-      ul {
-        list-style: none;
+      ul li {
+        position: relative;
 
-        li {
-          a img {
-            width: 100%;
-          }
+        a {
+          display: inline-block;
+          margin-bottom: 100px;
+          overflow: hidden;
+        }
 
+        a img {
+          width: 100%;
         }
       }
     }
-
-
   }
 
   //  endregion
@@ -230,11 +230,19 @@
   //  region Contact Page Layout
 
   .contact {
-    height: 66vh;
+    height: 80vh;
+    border: 1px solid red;
 
-    h2 {
-      text-align: center;
-      margin-top: 50%;
+    .title {
+      h2 {
+        text-align: center;
+        margin-top: 50%;
+        z-index: 10;
+      }
+
+      .highlighter {
+        width: 100%;
+      }
     }
 
     ul {
