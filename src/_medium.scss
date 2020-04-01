@@ -1,0 +1,108 @@
+@media screen and (min-width: 48em) {
+  //region Header
+  header {
+    ul {
+      z-index: 100;
+      li {
+        a {
+          display: inline-block;
+
+        }
+      }
+    }
+
+  }
+//  endregion
+
+  //  region Hero
+  .hero {
+    position: relative;
+    .message {
+      z-index: 20;
+      h1, h3 {
+        text-align: left;
+      }
+
+      h1 {
+        font-size: $h1-size*0.7;
+      }
+
+      h3 {
+        font-size: $h3-size*0.7;
+      }
+    }
+
+    .blob {
+      display: block;
+      opacity: 0.9;
+      overflow: visible;
+    }
+
+    .blob-left {
+      position: absolute;
+      left: -24em;
+      top: 8em;
+    }
+
+    .blob-right {
+      position: absolute;
+      top: -18em;
+      right: -680px;
+      transform: rotateZ(15deg);
+    }
+  }
+//  endregion
+
+  //  region Intro
+
+
+    h2 {
+      font-size: $h2-size*0.8;
+    }
+
+    .title div.highlighter{
+      top: -1.3em;
+      height: 0.6em;
+    }
+
+
+
+
+
+  //  endregion
+
+//  region About
+  .about {
+    .title div.highlighter {
+      width: 195px;
+    }
+  }
+
+
+//  region
+
+
+//  region Work
+
+  .work {
+    .title div.highlighter {
+      width: 103px;
+    }
+  }
+
+//  endregion
+
+  #contact {
+    .title {
+      h2 {
+        width: 475px;
+      }
+    }
+    .title div.highlighter {
+      width: 475px;
+
+    }
+  }
+
+
+}

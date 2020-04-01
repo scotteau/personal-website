@@ -1,210 +1,211 @@
-@media screen and (max-width: 48em) {
-  // region Navigation bar
-  header {
+body {
+  min-width: 386px;
+}
+
+// region Navigation bar
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: transparent;
+
+
+  .logo {
+    width: 44px;
+    position: relative;
+    top: 2px;
+  }
+
+  ul {
     display: flex;
-    justify-content: space-between;
+    list-style: none;
     align-items: center;
-    padding: 20px 25px;
-    background-color: $bg-dark;
-    position: sticky;
-    top: 0;
-    z-index: 20;
 
-    .logo {
-      width: 44px;
-      position: relative;
-      top: 2px;
-    }
+    li {
+      margin-left: 2rem;
 
-    ul {
-      display: flex;
-      list-style: none;
-      align-items: center;
+      a {
+        color: white;
+        text-decoration: none;
+        text-transform: capitalize;
+        display: none;
 
-      li {
-        margin-left: 2.5rem;
-
-        a {
-          color: white;
-          text-decoration: none;
-          text-transform: capitalize;
-          display: none;
-
-          &:hover {
-            cursor: pointer;
-            text-decoration: underline;
-          }
-        }
-
-        .cta {
-          font-size: $p-size * 0.9;
-          font-weight: 400;
-          padding: 6px 1.5em;
-          border: 1px solid white;
-          border-radius: 20px;
-          background-color: transparent;
-          color: white;
-          display: flex;
-          align-items: center;
-          opacity: 0.9;
-          transition: all 0.3s linear;
-          font-family: $bodyText;
-
-          [class="material-icons"] {
-            margin-left: 4px;
-          }
-
-          &:hover {
-            background-color: white;
-            cursor: pointer;
-            color: $bg-dark;
-            text-decoration: none;
-          }
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
         }
       }
-    }
-  }
 
-  //endregion
-
-  //region Hero page layout
-
-  body {
-    min-width: 375px;
-  }
-
-  .hero {
-    width: 66.6%;
-    margin: 0 auto;
-    height: 90vh;
-    position: relative;
-    display: flex;
-    justify-content: center;
-
-    .message {
-      position: absolute;
-      top: 33%;
-      margin: 0 auto;
-      min-width: 375px;
-
-      h1 {
+      .cta {
+        font-size: $p-size * 0.9;
+        font-weight: 400;
+        padding: 6px 1.5em;
+        border: 1px solid white;
+        border-radius: 20px;
+        background-color: transparent;
+        color: white;
+        display: flex;
+        align-items: center;
         opacity: 0.9;
-        font-size: $h1-size * 0.5;
-        text-align: center;
-      }
+        transition: all 0.3s linear;
+        font-family: $bodyText;
+        font-weight: $a-weight;
 
-      h3 {
-        opacity: 0.5;
-        font-size: $h3-size * 0.5;
-        text-align: center;
+        [class="material-icons"] {
+          margin-left: 4px;
+        }
+
+        &:hover {
+          background-color: white;
+          cursor: pointer;
+          color: $bg-dark;
+          text-decoration: none;
+        }
       }
     }
+  }
+}
 
-    .blob {
-      display: none;
+//endregion
+
+//region Hero page layout
+
+.hero {
+  width: 66.6%;
+  margin: 0 auto;
+  height: 90vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  .message {
+    position: absolute;
+    top: 33%;
+    margin: 0 auto;
+    min-width: 375px;
+
+    h1 {
+      opacity: 0.9;
+      font-size: $h1-size * 0.5;
+      text-align: center;
+    }
+
+    h3 {
+      opacity: 0.5;
+      font-size: $h3-size * 0.5;
+      text-align: center;
     }
   }
 
-  //endregion
+  .blob {
+    display: none;
+  }
+}
 
-  //region Intro Page Layout
-  .intro {
-    width: 100vw;
-    height: 100vh;
+//endregion
+
+//region Intro Page Layout
+.intro {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  left: -20px;
+  bottom: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  .circle {
+    position: absolute;
+    transform-origin: top;
+    top: 0;
+    width: 100px;
+    transition: 0.2s ease-out all;
+  }
+
+  h2 {
+    text-align: center;
+    z-index: 10;
+  }
+}
+
+//  endregion
+
+.title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+
+  .highlighter {
+    transform-origin: left;
     position: relative;
-    left: -20px;
-    bottom: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    top: -0.8em;
+    height: 0.3em;
+    opacity: 0.8;
+    background-color: $blue;
+    transform: scaleX(0);
+  }
+}
 
-    .circle {
-      position: absolute;
-      transform-origin: top;
-      top: 0;
-      width: 100px;
-      transition: 0.2s ease-out all;
+//  region About Page Layout
+.about {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .title {
+    h2 {
+      text-align: center;
+      z-index: 10;
     }
+
+    .highlighter {
+      width: 120px;
+    }
+  }
+
+  .interactive {
+    width: 90%;
+    margin: 0 auto;
+    p {
+      margin-top: 0.8em;
+      line-height: 1.5;
+    }
+
+    padding-bottom: 80px;
+  }
+}
+
+//  endregion
+
+//  region Work Page Layout
+.work {
+  width: 100vw;
+  position: relative;
+  left: -20px;
+
+  .title {
+    position: sticky;
+    top: 8vh;
+
+    padding-bottom: 20vh;
 
     h2 {
       text-align: center;
       z-index: 10;
     }
-  }
-
-  //  endregion
-
-  .title {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    padding: 2em;
 
     .highlighter {
-      transform-origin: left;
-      position: relative;
-      top: -14px;
-      height: 8px;
-      opacity: 0.8;
-      background-color: $blue;
-      transform: scaleX(0);
+      width: 66px;
     }
   }
-
-  //  region About Page Layout
-  .about {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-
-    .title {
-      h2 {
-        text-align: center;
-        z-index: 10;
-      }
-
-      .highlighter {
-        width: 34%;
-      }
-    }
-
-    .interactive {
-      width: 90%;
-      margin: 0 auto;
-      p {
-        margin-top: 0.8em;
-        line-height: 1.5;
-      }
-
-      padding-bottom: 80px;
-    }
-  }
-
-  //  endregion
-
-  //  region Work Page Layout
-  .work {
-    width: 100vw;
-    position: relative;
-    left: -20px;
-
-    .title {
-      position: sticky;
-      top: 8vh;
-
-      padding-bottom: 20vh;
-
-      h2 {
-        text-align: center;
-        z-index: 10;
-      }
-
-      .highlighter {
-        width: 18%;
-      }
-    }
 
     .portfolios {
       width: 100%;
@@ -213,78 +214,85 @@
         position: relative;
 
         a {
-          display: inline-block;
-          margin-bottom: 100px;
+          display: flex;
+          justify-content: center;
+          padding-bottom: 100px;
           overflow: hidden;
+
         }
 
-        a img {
-          width: 100%;
-        }
-      }
-    }
-  }
-
-  //  endregion
-
-  //  region Contact Page Layout
-
-  .contact {
-    height: 80vh;
-    border: 1px solid red;
-
-    .title {
-      h2 {
-        text-align: center;
-        margin-top: 50%;
-        z-index: 10;
-      }
-
-      .highlighter {
+      a img {
         width: 100%;
-      }
-    }
-
-    ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 10%;
-
-      li {
-        margin-top: 16%;
-        transition: all 0.3s ease-in-out;
-
-        &:hover {
-          cursor: pointer;
-          text-decoration: underline;
-        }
-
-        a {
-          color: white;
-          text-transform: capitalize;
-          text-decoration: none;
-        }
+        max-width: 550px;
       }
     }
   }
+}
 
-  //  region
+//  endregion
 
-  //  region Footer Layout
-  footer {
+//  region Contact Page Layout
+
+.contact {
+  height: 80vh;
+  min-height: 600px;
+  min-width: 368px;
+  //border: 1px solid red;
+  padding-top: 150px;
+  padding-bottom: 200px;
+
+
+  .title {
+
+    h2 {
+      text-align: center;
+      z-index: 10;
+      width: 300px;
+    }
+
+    .highlighter {
+      width: 300px;
+    }
+  }
+
+  ul {
+    list-style: none;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin: 1.5em auto;
 
-    p {
-      text-align: center;
-      opacity: 0.5;
-      font-size: $p-size * 0.8;
+    li {
+      transition: all 0.3s ease-in-out;
+      margin-top: 3em;
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      a {
+        color: white;
+        text-transform: capitalize;
+        text-decoration: none;
+      }
     }
   }
-  //  region
 }
+
+//  region
+
+//  region Footer Layout
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5em auto;
+
+  p {
+    text-align: center;
+    opacity: 0.5;
+    font-size: $p-size * 0.8;
+  }
+}
+//  region
