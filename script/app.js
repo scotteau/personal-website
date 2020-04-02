@@ -121,8 +121,8 @@ window.addEventListener("load", () => {
   const highlighter3 = gsap.to(".contact .highlighter", 2, { scaleX: 1 });
 
   const aboutMe = new ScrollMagic.Scene({
-    triggerElement: ".about h2",
-    duration: 400,
+    triggerElement: ".about p",
+    duration: 600,
     triggerHook: 0.8,
   })
     // .addIndicators({ name: "highlighter" })
@@ -130,8 +130,8 @@ window.addEventListener("load", () => {
     .addTo(controller);
 
   const work = new ScrollMagic.Scene({
-    triggerElement: ".work h2",
-    duration: 400,
+    triggerElement: ".work li",
+    duration: 600,
     triggerHook: 0.8,
   })
     // .addIndicators({ name: "highlighter" })
@@ -140,7 +140,7 @@ window.addEventListener("load", () => {
 
   const contact = new ScrollMagic.Scene({
     triggerElement: ".contact h2",
-    duration: 400,
+    duration: 600,
     triggerHook: 0.8,
   })
     // .addIndicators({ name: "highlighter" })
