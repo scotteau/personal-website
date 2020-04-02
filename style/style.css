@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+h1, h2, h3, h4 {
+  font-family: "Poppins", sans-serif; }
+
+h1 {
+  font-weight: 600; }
+
+h2 {
+  font-weight: 600; }
+
+h3 {
+  font-weight: 400; }
+
+body, a {
+  font-family: "Playfair Display", serif; }
+
+body {
+  overflow-x: hidden;
+  background-color: #333335;
+  color: white; }
+
+main {
+  margin: 0 20px; }
+
+html {
+  scroll-behavior: smooth; }
+
+body {
+  min-width: 386px; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: transparent; }
+  header .logo {
+    width: 44px;
+    position: relative;
+    top: 2px; }
+  header ul {
+    display: flex;
+    list-style: none;
+    align-items: center; }
+    header ul li {
+      margin-left: 2rem; }
+      header ul li a {
+        color: white;
+        text-decoration: none;
+        text-transform: capitalize;
+        display: none; }
+        header ul li a:hover {
+          cursor: pointer;
+          text-decoration: underline; }
+      header ul li .cta {
+        font-size: 14.4px;
+        padding: 6px 1.5em;
+        border: 1px solid white;
+        border-radius: 20px;
+        background-color: transparent;
+        color: white;
+        display: flex;
+        align-items: center;
+        opacity: 0.9;
+        transition: all 0.3s linear;
+        font-family: "Playfair Display", serif;
+        font-weight: 700; }
+        header ul li .cta [class="material-icons"] {
+          margin-left: 4px; }
+        header ul li .cta:hover {
+          background-color: white;
+          cursor: pointer;
+          color: #333335;
+          text-decoration: none; }
+
+.hero {
+  margin: 0 auto;
+  height: 90vh;
+  position: relative;
+  display: flex;
+  justify-content: center; }
+  .hero .message {
+    position: absolute;
+    top: 33%;
+    margin: 0 auto;
+    min-width: 375px;
+    max-width: 650px; }
+    .hero .message h1 {
+      opacity: 0.9;
+      font-size: 32px;
+      text-align: center; }
+    .hero .message h3 {
+      opacity: 0.5;
+      font-size: 15px;
+      text-align: center; }
+  .hero .blob {
+    display: none; }
+
+.intro {
+  width: 100vw;
+  height: 120vh;
+  position: relative;
+  left: -20px;
+  bottom: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; }
+  .intro .circle {
+    position: absolute;
+    transform-origin: top;
+    top: 0;
+    width: 100px;
+    transition: 0.2s ease-out all; }
+  .intro h2 {
+    text-align: center;
+    z-index: 10; }
+
+.title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em; }
+  .title .highlighter {
+    transform-origin: left;
+    position: relative;
+    top: -0.8em;
+    height: 0.3em;
+    opacity: 0.8;
+    background-color: #2196f3;
+    transform: scaleX(0); }
+
+.about {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
+  .about .title {
+    margin-top: 80px; }
+    .about .title h2 {
+      text-align: center;
+      z-index: 10; }
+    .about .title .highlighter {
+      width: 120px; }
+  .about .interactive {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 80px; }
+    .about .interactive p {
+      margin-top: 0.8em;
+      line-height: 1.5; }
+      .about .interactive p a {
+        color: white;
+        text-decoration: none; }
+        .about .interactive p a:hover {
+          text-decoration: underline; }
+
+.work {
+  width: 100vw;
+  position: relative;
+  left: -20px; }
+  .work .title {
+    position: sticky;
+    top: 8vh;
+    padding-bottom: 20vh; }
+    .work .title h2 {
+      text-align: center;
+      z-index: 10; }
+    .work .title .highlighter {
+      width: 66px; }
+  .work .portfolios {
+    width: 100%; }
+    .work .portfolios ul li {
+      position: relative; }
+      .work .portfolios ul li a {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 15vh;
+        overflow: hidden; }
+      .work .portfolios ul li a img {
+        width: 100%;
+        max-width: 550px; }
+
+.contact {
+  height: 85vh;
+  min-height: 600px;
+  min-width: 368px;
+  padding-top: 150px;
+  padding-bottom: 200px; }
+  .contact .title h2 {
+    text-align: center;
+    z-index: 10;
+    width: 300px; }
+  .contact .title .highlighter {
+    width: 300px; }
+  .contact ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .contact ul li {
+      transition: all 0.3s ease-in-out;
+      margin-top: 3em; }
+      .contact ul li:hover {
+        cursor: pointer;
+        text-decoration: underline; }
+      .contact ul li a {
+        color: white;
+        text-transform: capitalize;
+        text-decoration: none; }
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5em auto; }
+  footer p {
+    text-align: center;
+    opacity: 0.5;
+    font-size: 12.8px; }
+
+@media screen and (min-width: 48em) {
+  header ul {
+    z-index: 100; }
+    header ul li a {
+      display: inline-block; }
+  .hero {
+    position: relative; }
+    .hero .message {
+      padding-left: 60px;
+      z-index: 20; }
+      .hero .message h1, .hero .message h3 {
+        text-align: left; }
+      .hero .message h1 {
+        font-size: 51.2px; }
+      .hero .message h3 {
+        font-size: 24px; }
+    .hero .blob {
+      display: block;
+      opacity: 0.9;
+      overflow: visible; }
+    .hero .blob-left {
+      position: absolute;
+      left: -16em;
+      top: 8em; }
+    .hero .blob-right {
+      position: absolute;
+      top: -19em;
+      right: -550px;
+      transform: rotateZ(6deg); }
+  h2 {
+    font-size: 38.4px; }
+  .title div.highlighter {
+    top: -1.3em;
+    height: 0.6em; }
+  .about .title div.highlighter {
+    width: 195px; }
+  .about .interactive {
+    width: 80%;
+    max-width: 600px; }
+  .work .title div.highlighter {
+    width: 103px; }
+  #contact .title h2 {
+    width: 475px; }
+  #contact .title div.highlighter {
+    width: 475px; } }
+
+@media screen and (min-width: 64em) {
+  h1 {
+    font-size: 57.6px !important; }
+  h3 {
+    font-size: 27px !important; }
+  .hero .message {
+    padding-left: 30px !important; } }
