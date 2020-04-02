@@ -66,7 +66,7 @@ window.addEventListener("load", () => {
 
   const tween = gsap.to(".circle", 2, {
     ease: "none",
-    scale: 40,
+    scale: 50,
   });
 
   const trigger = document.querySelector("h1");
