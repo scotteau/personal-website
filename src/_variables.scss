@@ -8,13 +8,13 @@ $h3-size: 30px;
 $h4-size: 18px;
 $p-size: 16px;
 
-$h1-weight:600;
-$h2-weight:600;
-$h3-weight:400;
+$h1-weight: 600;
+$h2-weight: 600;
+$h3-weight: 400;
 $a-weight: 700;
 
-$purple:#AD4BED;
-$blue:#2196f3;
+$purple: #ad4bed;
+$blue: #2196f3;
 $orange: #ff9800;
 $green: #8bc34a;
 $red: #e51a21;
@@ -22,9 +22,11 @@ $red: #e51a21;
 $bg-dark: #333335;
 $bg-lightGray: #1a2839;
 
-
 $image-width: 520px;
 $image-height: 330px;
 
-$logo-width:42px;
-$logo-height:30px;
+$logo-width: 42px;
+$logo-height: 30px;
+
+$bp-medium: 48em; //768px
+$bp-large: 64em; //1024px
