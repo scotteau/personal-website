@@ -41,6 +41,10 @@ html {
 }
 
 
+.hidden {
+  display: none;
+}
+
 @import "small";
 @import "medium";
 @import "large";
