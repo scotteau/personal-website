@@ -279,7 +279,7 @@ header {
 
       &:hover {
         cursor: pointer;
-        text-decoration: underline 2px;
+        text-decoration: underline;
       }
 
       a {
@@ -321,14 +321,13 @@ footer {
   }
 
   .next {
-    //background-color: crimson;
     transition: all 0.3s ease-in-out;
-    text-decoration: underline 1px !important;
+    text-decoration: underline !important;
 
     &:hover, :focus {
       cursor: pointer;
-      text-decoration: gray line-through 1px !important;
-      //background-color: $purple;
+      text-decoration: line-through !important;
+      text-decoration-color: gray;
       color: gray;
     }
 

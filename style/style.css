@@ -214,7 +214,7 @@ header {
       margin-top: 3em; }
       .contact ul li:hover {
         cursor: pointer;
-        text-decoration: underline 2px; }
+        text-decoration: underline; }
       .contact ul li a {
         color: white;
         text-transform: capitalize;
@@ -239,10 +239,11 @@ footer {
 
 .interactive .next {
   transition: all 0.3s ease-in-out;
-  text-decoration: underline 1px !important; }
+  text-decoration: underline !important; }
   .interactive .next:hover, .interactive .next :focus {
     cursor: pointer;
-    text-decoration: gray line-through 1px !important;
+    text-decoration: line-through !important;
+    text-decoration-color: gray;
     color: gray; }
 
 section#about.about div.interactive p span.final.visible {
@@ -307,7 +308,11 @@ section#about.about div.interactive p span.final.visible {
   #contact .title h2 {
     width: 475px; }
   #contact .title div.highlighter {
-    width: 475px; } }
+    width: 475px; }
+  #contact ul li {
+    margin-top: 3.5em; }
+    #contact ul li a {
+      font-size: 19.2px; } }
 
 @media screen and (min-width: 64em) {
   h1 {

@@ -108,6 +108,15 @@
       width: 475px;
 
     }
+
+    ul {
+      li {
+        margin-top: 3.5em;
+        a {
+          font-size: $p-size*1.2;
+        }
+      }
+    }
   }
 
 
