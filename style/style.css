@@ -16,7 +16,8 @@ h3 {
   font-weight: 400; }
 
 body, a {
-  font-family: "Playfair Display", serif; }
+  font-family: "Playfair Display", serif;
+  font-size: 16px; }
 
 body {
   overflow-x: hidden;
@@ -61,7 +62,7 @@ header {
         display: none; }
         header ul li a:hover {
           cursor: pointer;
-          text-decoration: underline; }
+          text-decoration: underline 2px; }
       header ul li .cta {
         font-size: 14.4px;
         padding: 6px 1.5em;
@@ -154,13 +155,15 @@ header {
   .about .interactive {
     width: 90%;
     margin: 0 auto;
+    margin-top: 14vh;
     padding-bottom: 80px; }
     .about .interactive p {
       margin-top: 0.8em;
-      line-height: 1.5; }
+      line-height: 1.5;
+      font-size: 17.6px; }
       .about .interactive p a {
-        color: white;
-        text-decoration: none; }
+        font-size: 17.6px;
+        color: white; }
         .about .interactive p a:hover {
           text-decoration: underline; }
 
@@ -211,7 +214,7 @@ header {
       margin-top: 3em; }
       .contact ul li:hover {
         cursor: pointer;
-        text-decoration: underline; }
+        text-decoration: underline 2px; }
       .contact ul li a {
         color: white;
         text-transform: capitalize;
@@ -227,6 +230,38 @@ footer {
     text-align: center;
     opacity: 0.5;
     font-size: 12.8px; }
+
+.interactive .hidden {
+  display: none; }
+
+.interactive .visible {
+  display: block; }
+
+.interactive .next {
+  transition: all 0.3s ease-in-out;
+  text-decoration: underline 1px !important; }
+  .interactive .next:hover, .interactive .next :focus {
+    cursor: pointer;
+    text-decoration: gray line-through 1px !important;
+    color: gray; }
+
+section#about.about div.interactive p span.final.visible {
+  margin-top: 20px;
+  font-size: 24px;
+  display: flex;
+  align-items: center; }
+  section#about.about div.interactive p span.final.visible .material-icons {
+    color: #8bc34a;
+    margin-right: 1em;
+    animation-name: done;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out; }
+
+@keyframes done {
+  from {
+    transform: scale(0); }
+  to {
+    transform: scale(1.2); } }
 
 @media screen and (min-width: 48em) {
   header ul {
@@ -281,3 +316,5 @@ footer {
     font-size: 27px !important; }
   .hero .message {
     padding-left: 30px !important; } }
+
+/*# sourceMappingURL=style.css.map */

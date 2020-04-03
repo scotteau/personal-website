@@ -166,4 +166,14 @@ window.addEventListener("load", () => {
 }); // end of method
 
 
+//region Interactive Text
+const triggers = document.querySelectorAll(".about .next");
 
+for (let trigger of triggers) {
+  trigger.addEventListener("click", (e) => {
+    e.target.parentElement.classList.replace("visible", "hidden");
+    e.target.parentElement.nextElementSibling.classList.replace("hidden", "visible");
+  });
+}
+
+//endregion

@@ -36,7 +36,7 @@ header {
 
         &:hover {
           cursor: pointer;
-          text-decoration: underline;
+          text-decoration: underline 2px;
         }
       }
 
@@ -176,13 +176,15 @@ header {
   .interactive {
     width: 90%;
     margin: 0 auto;
+    margin-top: 14vh;
     p {
       margin-top: 0.8em;
       line-height: 1.5;
+      font-size: $p-size*1.1;
 
       a {
+        font-size: $p-size*1.1;
         color: white;
-        text-decoration: none;
         &:hover {
           text-decoration: underline;
         }
@@ -277,7 +279,7 @@ header {
 
       &:hover {
         cursor: pointer;
-        text-decoration: underline;
+        text-decoration: underline 2px;
       }
 
       a {
@@ -306,3 +308,55 @@ footer {
   }
 }
 //  region
+
+
+// region Interactive Text
+.interactive {
+  .hidden {
+    display: none;
+  }
+
+  .visible {
+    display: block;
+  }
+
+  .next {
+    //background-color: crimson;
+    transition: all 0.3s ease-in-out;
+    text-decoration: underline 1px !important;
+
+    &:hover, :focus {
+      cursor: pointer;
+      text-decoration: gray line-through 1px !important;
+      //background-color: $purple;
+      color: gray;
+    }
+
+
+
+  }
+}
+
+section#about.about div.interactive p span.final.visible {
+  margin-top: 20px;
+  font-size: $p-size*1.5;
+  display: flex;
+  align-items: center;
+
+
+  .material-icons {
+    color: $green;
+    margin-right: 1em;
+    animation-name: done;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+  }
+
+  @keyframes done {
+    from {transform: scale(0);}
+    to {transform: scale(1.2)}
+  }
+}
+
+
+// endregion
